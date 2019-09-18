@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using ExileCore.PoEMemory.MemoryObjects;
+using ExileCore.Shared;
 using ExileCore.Shared.AtlasHelper;
 using ExileCore.Shared.Interfaces;
 using Newtonsoft.Json;
@@ -11,9 +11,10 @@ using SharpDX;
 namespace ExileCore
 {
     public abstract class BaseSettingsPlugin<TSettings> : IPlugin where TSettings : ISettings, new()
-    {
-        private TSettings settings;
+    {                
+        const string TEXTURES_FOLDER = "textures";
         private AtlasTexturesProcessor _atlasTextures;
+        private PluginManager _pluginManager;
 
         protected BaseSettingsPlugin()
         {
@@ -116,6 +117,15 @@ namespace ExileCore
             _SaveSettings();
         }
 
+        public virtual void ReceiveEvent(string eventId, object args)
+        {
+        }
+
+        public void PublishEvent(string eventId, object args)
+        {
+            _pluginManager.ReceivePluginEvent(eventId, args, this);
+        }
+
         public virtual void OnPluginSelectedInMenu()
         {
         }
@@ -127,11 +137,6 @@ namespace ExileCore
 
         public virtual void Render()
         {
-        }
-
-        public void SetApi(object gameController, object graphics)
-        {
-            SetApi((GameController) gameController, (Graphics) graphics);
         }
 
         public void LogError(string msg, float time = 1f)
@@ -153,10 +158,11 @@ namespace ExileCore
         {
         }
 
-        private void SetApi(GameController gameController, Graphics graphics)
+        public void SetApi(GameController gameController, Graphics graphics, PluginManager pluginManager)
         {
             GameController = gameController;
             Graphics = graphics;
+            _pluginManager = pluginManager;
         }
 
         #region Atlas Images
@@ -165,7 +171,7 @@ namespace ExileCore
         {
             if (_atlasTextures == null)
             {
-                var atlasDirectory = Path.Combine(DirectoryFullName, "textures");
+                var atlasDirectory = Path.Combine(DirectoryFullName, TEXTURES_FOLDER);
                 var atlasConfigNames = Directory.GetFiles(atlasDirectory, "*.json");
 
                 if (atlasConfigNames.Length == 0)
@@ -185,7 +191,7 @@ namespace ExileCore
                              $"selecting the first one ''{atlasName}''", 20);
                 }
 
-                var atlasTexturePath = Path.Combine(DirectoryFullName, $"textures\\{atlasName}.png");
+                var atlasTexturePath = Path.Combine(DirectoryFullName, $"{TEXTURES_FOLDER}\\{atlasName}.png");
 
                 if (!File.Exists(atlasTexturePath))
                 {
@@ -194,7 +200,7 @@ namespace ExileCore
                     return null;
                 }
 
-                _atlasTextures = new AtlasTexturesProcessor(atlasConfigNames[0], atlasTexturePath);
+                _atlasTextures = new AtlasTexturesProcessor(configPath: atlasConfigNames[0], atlasPath: atlasTexturePath);
                 Graphics.InitImage(atlasTexturePath, false);
             }
 
