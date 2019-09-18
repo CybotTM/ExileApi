@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicFlaskRoutine", "Plugin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegionRewardHelper", "Plugins\Source\LegionRewardHelper\LegionRewardHelper.csproj", "{DA4D72BC-DC59-460D-8CDF-3071113FF286}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlagueBearerHelper", "Plugins\Source\PlagueBearerHelper\PlagueBearerHelper.csproj", "{829D70FF-84DE-4605-98B5-970A39BABDC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{DA4D72BC-DC59-460D-8CDF-3071113FF286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4D72BC-DC59-460D-8CDF-3071113FF286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4D72BC-DC59-460D-8CDF-3071113FF286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829D70FF-84DE-4605-98B5-970A39BABDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829D70FF-84DE-4605-98B5-970A39BABDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829D70FF-84DE-4605-98B5-970A39BABDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829D70FF-84DE-4605-98B5-970A39BABDC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +166,8 @@ Global
 		{1DF43765-FF6E-478D-8D85-55C07AE137DE} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{4EBA974C-AC8C-42A5-B8EE-5AD318B6D961} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{DA4D72BC-DC59-460D-8CDF-3071113FF286} = {CC061825-B447-4124-8467-9B830EB88F4C}
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99} = {CC061825-B447-4124-8467-9B830EB88F4C}
+		{829D70FF-84DE-4605-98B5-970A39BABDC4} = {CC061825-B447-4124-8467-9B830EB88F4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AD7BE45-2243-42A2-9D8F-2C212D20F7E9}
