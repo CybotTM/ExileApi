@@ -35,7 +35,7 @@ namespace GameOffsets
         [FieldOffset(0x6BD4 - Skip)] public int TotalAscendencyPoints;
         [FieldOffset(0x6BD8 - Skip)] public int SpentAscendencyPoints;
         [FieldOffset(0x6DD8 - Skip)] public byte PartyStatusType;
-        [FieldOffset(0x6C00 - Skip)] public byte NetworkState;
+        [FieldOffset(0x6E80 - Skip)] public byte NetworkState;
         [FieldOffset(0x6DF8 - Skip)] public byte PartyAllocationType;
         [FieldOffset(0x6C98 - Skip)] public float TimeInGame;
         [FieldOffset(0x6CA0 - Skip)] public int Latency;
@@ -47,12 +47,12 @@ namespace GameOffsets
         [FieldOffset(0x7130 - Skip)] public NativePtrArray GuildInventories;
         [FieldOffset(0x7270 - Skip)] public ushort TradeChatChannel;
         [FieldOffset(0x7278 - Skip)] public ushort GlobalChatChannel;
-        [FieldOffset(0x7340 - Skip)] public long CompletedMaps;
-        [FieldOffset(0x73C0 - Skip)] public long BonusCompletedAreas;
+        [FieldOffset(0x75E0 - Skip)] public long CompletedMaps;
+        [FieldOffset(0x7620 - Skip)] public long BonusCompletedAreas;
         [FieldOffset(0x7440 - Skip)] public long ElderInfluencedAreas;
         [FieldOffset(0)] public long MasterAreas;
-        [FieldOffset(0x7400 - Skip)] public long ElderGuardiansAreas; //Maybe wrong not tested
-        [FieldOffset(0x7380 - Skip)] public long ShapedAreas; //Maybe wrong not tested
+        [FieldOffset(0x7660 - Skip)] public long ElderGuardiansAreas; //Maybe wrong not tested
+        [FieldOffset(0x7660 - Skip)] public long ShapedAreas; //Maybe wrong not tested
         [FieldOffset(0x6E77 - Skip)] public ushort LastActionId;//Do we need this?
         [FieldOffset(0x7E5C - Skip)] public byte MonsterLevel;
         [FieldOffset(0x7E5D - Skip)] public byte MonstersRemaining;
