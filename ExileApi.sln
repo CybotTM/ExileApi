@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random Features", "..\NoStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickIt", "..\NoStressPlugins\Pickit\PickIt.csproj", "{286EB4C6-31A1-4B8E-BF5A-83F9591AE322}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninja Price", "..\NoStressPlugins\Get-Chaos-Value\Ninja Price\Ninja Price.csproj", "{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,14 @@ Global
 		{286EB4C6-31A1-4B8E-BF5A-83F9591AE322}.Release|Any CPU.Build.0 = Release|Any CPU
 		{286EB4C6-31A1-4B8E-BF5A-83F9591AE322}.Release|x64.ActiveCfg = Release|x64
 		{286EB4C6-31A1-4B8E-BF5A-83F9591AE322}.Release|x64.Build.0 = Release|x64
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Debug|x64.Build.0 = Debug|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Release|x64.ActiveCfg = Release|Any CPU
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +95,7 @@ Global
 		{4EBA974C-AC8C-42A5-B8EE-5AD318B6D961} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{3EFF75B6-8D15-4142-BF18-41BB03AF964A} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{286EB4C6-31A1-4B8E-BF5A-83F9591AE322} = {CC061825-B447-4124-8467-9B830EB88F4C}
+		{F65A35B8-85F4-4A43-B19A-4A7E09F0CB99} = {CC061825-B447-4124-8467-9B830EB88F4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AD7BE45-2243-42A2-9D8F-2C212D20F7E9}
