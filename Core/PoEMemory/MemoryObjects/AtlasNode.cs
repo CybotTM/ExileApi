@@ -1,3 +1,4 @@
+using ExileCore.PoEMemory.FilesInMemory.Atlas;
 using SharpDX;
 
 namespace ExileCore.PoEMemory.MemoryObjects
@@ -18,6 +19,8 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
         public string FlavourText => text != null ? text : text = M.ReadStringU(M.Read<long>(Address + 0x44));
 
+        public AtlasRegion AtlasRegion => TheGame.Files.AtlasRegions.GetByAddress(M.Read<long>(Address + 0x4D));
+
         public Vector2 GetPosByLayer(int layer)
         {
             const int X_START = 0xB9;
@@ -26,6 +29,13 @@ namespace ExileCore.PoEMemory.MemoryObjects
             var x = M.Read<float>(Address + X_START + layer * sizeof(float));
             var y = M.Read<float>(Address + Y_START + layer * sizeof(float));
             return new Vector2(x, y);
+        }
+
+        public int GetTierByLayer(int layer)
+        {
+            const int TIER_START = 0xA5;
+
+            return M.Read<int>(Address + TIER_START + layer * sizeof(int));
         }
 
         public bool IsUniqueMap
